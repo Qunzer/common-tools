@@ -18,12 +18,13 @@ import java.util.List;
 public class WebConfig extends WebMvcConfigurationSupport {
     @Bean
     public RequestMappingHandlerAdapter requestMappingHandlerAdapter() {
-        RequestMappingHandlerAdapter adapter = super.requestMappingHandlerAdapter();
-        List<HandlerMethodReturnValueHandler> returnValueHandlers = getDefaultReturnValueHandlers(adapter);
-        returnValueHandlers.add(0, new ReturnBodyMethodProcessor());
-        adapter.setReturnValueHandlers(returnValueHandlers);
-
-        return adapter;
+//        RequestMappingHandlerAdapter adapter = super.requestMappingHandlerAdapter();
+//        List<HandlerMethodReturnValueHandler> returnValueHandlers = getDefaultReturnValueHandlers(adapter);
+//        returnValueHandlers.add(0, new ReturnBodyMethodProcessor());
+//        adapter.setReturnValueHandlers(returnValueHandlers);
+//
+//        return adapter;
+        return null;
     }
 
     @SuppressWarnings("unchecked")
