@@ -1,11 +1,13 @@
 package common.tools;
 
+import java.io.Serializable;
+
 /**
  * Created by yuanrq on 2017/04/14.
  */
-class Foo {
+class Foo implements Serializable {
     private int id;
-    private String  name;
+    private String name;
 
     public int getId() {
         return id;

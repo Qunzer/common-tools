@@ -8,7 +8,9 @@ import java.lang.reflect.Field;
 /**
  * 生成set方法，便于进行逻辑复制
  * <p>
- * Created by yuanrq on 2017/04/14.
+ *
+ * @author yuanrq
+ * @date 2017/04/14
  */
 public class GenerateSetters {
     private static final Joiner joiner_space = Joiner.on(" ");

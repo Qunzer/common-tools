@@ -9,10 +9,19 @@ import java.util.concurrent.TimeUnit;
  * Created by rq on 2017/04/17.
  */
 public class RedisDistributedLockImpl implements DistributedLock {
-    private static final long DEFAULT_LOCK_HOLD_TIMEOUT = 60 * 60 * 24 * 30 * 12;//锁的默认持有时间，单位秒---变相去掉这个概念，将持有时间设置得很大
+    /**
+     * 锁的默认持有时间，单位秒---变相去掉这个概念，将持有时间设置得很大
+     */
+    private static final long DEFAULT_LOCK_HOLD_TIMEOUT = 60 * 60 * 24 * 30 * 12;
     private static final TimeUnit DEFAULT_LOCK_HOLD_TIME_UNIT = TimeUnit.SECONDS;
-    private static final int LOCK_WAIT_TIMEOUT = 100;//获取lock重试等待时间
-    private static final int DEFAULT_RETRY_COUNT = 5;//获取lock的重试次数
+    /**
+     * 获取lock重试等待时间
+     */
+    private static final int LOCK_WAIT_TIMEOUT = 100;
+    /**
+     * 获取lock的重试次数
+     */
+    private static final int DEFAULT_RETRY_COUNT = 5;
     private Jedis jedis;
 
     protected RedisDistributedLockImpl(Jedis jedis) {
