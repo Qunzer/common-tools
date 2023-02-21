@@ -23,7 +23,6 @@ public class IntRangeUtils {
         }
         //先按照fromTime排序
         intRangeList.sort(Comparator.comparing(IntRange::getFrom));
-
         List<IntRange> results = Lists.newArrayList();
         for (IntRange intRange : intRangeList) {
             int from = intRange.getFrom();
@@ -44,5 +43,4 @@ public class IntRangeUtils {
         List<IntRange> intRanges = mergeIntRange(Lists.newArrayList(new IntRange(2, 7), new IntRange(7, 9), new IntRange(9, 12)));
         System.out.println(intRanges);
     }
-
 }
